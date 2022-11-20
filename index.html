@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Final Fantasy XIV Free Trial</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <header>
@@ -37,29 +37,40 @@
 </div>
 </header>
 <body>
-    <form name="formulario_FF14" id="registro" onsubmit="" method="post">
-        <input type="text" placeholder="Nombre" name="Nombre"  required>
-        
-        <input type="text" placeholder="Apellidos" name="Apellidos"  required>
-        
-        <input type="text" placeholder="E-mail" name="Correo"  required>
-        
-        <input type="text" placeholder="Telefono" name="Telefono" minlength="9" maxlength="11"  required>
-        
-        <input type="text" placeholder="DNI" name="DNI"  required>
-        
-        <input type="text" placeholder="IBAN" name="IBAN"  required>
-        
-        <input type="text" placeholder="SWIFT" name="SWIFT"  required>
-        
-        <input type="text" placeholder="Nombre de Usuario"  name="Usuario" required>
-        
-        <input type="text" placeholder="Fecha de Nacimiento"  name="fecha_nac" required>
-        
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Borrar Todo">
-    </form>
     <img src="images/fondo.png" id="fondo"/>
+    <div id="formulario">
+        <form id="formulario_FF14" name="registro" onsubmit="" method="post">
+            <div id="Nombrecompleto">
+            <input type="text" placeholder="Nombre" id="Nombre"  required>
+            
+            <input type="text" placeholder="Apellidos" id="Apellidos"  required>
+            </div>
+            <input type="text" placeholder="E-mail" id="Correo"  required>
+            
+            <input type="text" placeholder="Telefono" id="Telefono" minlength="9" maxlength="11"  required>
+            
+            <input type="text" placeholder="DNI" id="DNI"  required>
+            
+            <div id="faccion">
+                <input type="radio" id="faccion1" name="faccion" value="Twin Adders" />
+                <label for="faccion1">Twin Adders</label>
+          
+                <input type="radio" id="faccion2" name="faccion" value="The Maelstrom" />
+                <label for="faccion2">The Maelstrom</label>
+          
+                <input type="radio" id="faccion3" name="faccion" value="The Immortal Flames" />
+                <label for="faccion3">The Immortal Flames</label>
+              </div>
+            
+            
+            <input type="text" placeholder="Nombre de Usuario"  id="Usuario" required>
+            
+            <input type="text" placeholder="Fecha de Nacimiento"  id="fecha_nac" required>
+            
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar Todo">
+        </form>
+    </div>
 </body>
 <footer>
     <p id="copyright">© 2022 SQUARE ENIX LTD. Todos los derechos reservados.

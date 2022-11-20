@@ -118,14 +118,65 @@ background-color: black;
 #actual{
     background-color: #a02c2c;
 }
-  #registro{
+
+#formulario,#registro{
     border: 1px solid black ;
     border-radius: 5px;
     padding: 17px;
-    width: 300px;
     position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 2;
+    display: grid;
+    background-color: #201c1c;
+}
+input{
+  margin: 5px;
+}
+#formulario{
+  inline-size: min-content;
+  width: 1000px;
+  height: 500px;
+}
+
+#Nombrecompleto{
+  display: flex;
+}
+
+#formulario_FF14{
+  display: contents;
+}
+
+#Nombre{
+  width: 300px;
+}
+
+#Apellidos{
+  width: 300px;
+  margin-left: 100px;
+}
+
+input[type=radio]#faccion1 {
+  accent-color: yellow;
+}
+
+input[type=radio]#faccion2 {
+  accent-color:red
+}
+
+input[type=radio]#faccion3 {
+  accent-color: black;
+}
+
+label{
+  color: white;
+}
+
+input[type=radio]#faccion1,#faccion2,#faccion3{
+  margin-left: 100px;
+}
+
+#faccion{
+  margin-left: 50px;
 }
