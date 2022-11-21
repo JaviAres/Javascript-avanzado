@@ -130,16 +130,16 @@ background-color: black;
     z-index: 2;
     display: grid;
     background-color: #201c1c;
-    margin-top: 100px;
+    margin-top: 100px; 
+    inline-size: min-content;
+    width: 1000px;
+    padding: 40px;
+ 
 }
 input{
   margin: 5px;
   height: 40px;
-}
-#formulario{
-  inline-size: min-content;
-  width: 1000px;
- 
+  font-size: 1rem;
 }
 
 #Nombrecompleto{
@@ -156,7 +156,6 @@ input{
 
 #Apellidos{
   width: 300px;
-  margin-left: 100px;
 }
 
 input[type=radio]#faccion1 {
@@ -203,4 +202,23 @@ input[type=radio]#faccion1,#faccion2,#faccion3{
 #immortalflames{
   height: 200px;
   margin:auto;
+}
+
+#heavensward,#stormblood,#shadowbringers,#endwalker{
+  height: 200px;
+margin: 20px;
+}
+
+#expansiones ul{
+  border-color: #a02c2c;
+  display: inline-flex;
+}
+#expansiones input{
+  position: absolute;
+  left: -99999px;
+}
+
+#expansiones input[type="radio"]:checked + label > img {
+  border: 1px solid rgb(0,0,0);
+  box-shadow: 0 0 3px 3px #a02c2c;
 }

@@ -43,21 +43,26 @@
     <div id="formulario">
         <form id="formulario_FF14" name="registro" onsubmit="" method="post">
             <div id="Nombrecompleto">
-            <input type="text" placeholder="Nombre" id="Nombre"  required>
-            
-            <input type="text" placeholder="Apellidos" id="Apellidos"  required>
+                <input type="text" placeholder="Nombre" id="Nombre"  required>
+                
+                <input type="text" placeholder="Apellidos" id="Apellidos"  required>
+
+                <input type="date" placeholder="Fecha de Nacimiento"  id="fecha_nac" required>
             </div>
-            <input type="text" placeholder="E-mail" id="Correo"  required>
-            
-            <input type="text" placeholder="Telefono" id="Telefono" minlength="9" maxlength="11"  required>
-            
-            <input type="text" placeholder="DNI" id="DNI"  required>
-            
-            
-            
             <input type="text" placeholder="Nombre de Usuario"  id="Usuario" required>
+            <input type="text" placeholder="E-mail" id="Correo"  required>
+            <div id="contacto">
+                <input type="text" placeholder="Telefono" id="Telefono" minlength="9" maxlength="11"  required>
+                
+                <input type="text" placeholder="DNI" id="DNI"  required>
+            </div>
             
-            <input type="text" placeholder="Fecha de Nacimiento"  id="fecha_nac" required>
+            
+            <div id="tarjetacredito">
+                <input type="text" placeholder="Tarjeta de Credito" id="tarjeta">
+                <input type="text" placeholder="CVV" id="cvv">
+            </div>
+            
             <div id="faccion">
                 <input type="radio" id="faccion1" name="faccion" value="Twin Adders" />
                 <label for="faccion1">Twin Adders</label>
@@ -71,9 +76,19 @@
 
               <div id="explicacion">
             </div>
-             <div id="botones">
+                <div id="expansiones">
+                    <input type="radio" id="expansion1" name="expansion" value="Heavensward" />
+                    <label for="expansion1"><img src="images/heavensward.png" id="heavensward"></label>
+                    <input type="radio" id="expansion2" name="expansion" value="Stormblood" />
+                    <label for="expansion2"><img src="images/stormblood.png" id="stormblood"></label>
+                    <input type="radio" id="expansion3" name="expansion" value="Shadowbringers" />
+                    <label for="expansion3"><img src="images/shadowbringers.png" id="shadowbringers"></label>
+                    <input type="radio" id="expansion4" name="expansion" value="Endwalker" />
+                    <label for="expansion4"><img src="images/endwalker.png" id="endwalker"></label>
+                </div>
+             <div id="botones"><br>
             <input type="submit" value="Enviar">
-            <input type="reset" value="Borrar Todo">
+            <input type="reset" value="Borrar Todo" id="erase">
            </div>
         </form>  
        

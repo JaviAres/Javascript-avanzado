@@ -16,3 +16,12 @@ $('input[id=faccion3]').click(function(){
     $("#explicacion").animate({height: "400px"});
     $("#explicacion").append(" <img id='immortalflames' src='../images/immortalflames.png'><p>Currently, the bulk of Ul'dah's military strength comes from their standing army of mercenaries and the now dwindling contingent of palace guards known as the Sultansworn. To bring order to their ranks and oversee additional wartime training, the sultana has resurrected the Immortal Flames—an elite force of battle-hardened veterans that once instilled fear in the city-state's neighboring nations during ages past. This unit would act as a core aspect of the army, essentially bolstering its power, and in effect grant more authority to the sultana and her advisers—something of which those in control of the city-state's economy—namely the Syndicate—are wary.</p>")
  }) 
+
+$("#erase").click(function(){
+    $("#explicacion").empty(); 
+    $("#explicacion").animate({height: "0px"});
+})
+
+$("#expansiones input[type='radio']").click(function(){
+ this.animate({height:"225px"});
+})
