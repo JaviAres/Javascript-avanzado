@@ -119,7 +119,7 @@ background-color: black;
     background-color: #a02c2c;
 }
 
-#formulario,#registro{
+#formulario{
     border: 1px solid black ;
     border-radius: 5px;
     padding: 17px;
@@ -133,11 +133,12 @@ background-color: black;
 }
 input{
   margin: 5px;
+  height: 40px;
 }
 #formulario{
   inline-size: min-content;
   width: 1000px;
-  height: 500px;
+ 
 }
 
 #Nombrecompleto{
@@ -179,4 +180,9 @@ input[type=radio]#faccion1,#faccion2,#faccion3{
 
 #faccion{
   margin-left: 50px;
+}
+#explicacion{
+  z-index: 2;
+  display: grid;
+  background-color: #201c1c;
 }

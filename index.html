@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Fantasy XIV Free Trial</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/FFXIV_Logo.ico" type="image/x-icon">
 </head>
 <header>
     
@@ -51,6 +52,11 @@
             
             <input type="text" placeholder="DNI" id="DNI"  required>
             
+            
+            
+            <input type="text" placeholder="Nombre de Usuario"  id="Usuario" required>
+            
+            <input type="text" placeholder="Fecha de Nacimiento"  id="fecha_nac" required>
             <div id="faccion">
                 <input type="radio" id="faccion1" name="faccion" value="Twin Adders" />
                 <label for="faccion1">Twin Adders</label>
@@ -61,20 +67,26 @@
                 <input type="radio" id="faccion3" name="faccion" value="The Immortal Flames" />
                 <label for="faccion3">The Immortal Flames</label>
               </div>
-            
-            
-            <input type="text" placeholder="Nombre de Usuario"  id="Usuario" required>
-            
-            <input type="text" placeholder="Fecha de Nacimiento"  id="fecha_nac" required>
-            
+           <div id="botones">
             <input type="submit" value="Enviar">
             <input type="reset" value="Borrar Todo">
-        </form>
-    </div>
+            <input type="button" value="crece" id="crece">
+            <input type="button" value="decrece" id="decrece">
+           </div>
+              <div id="explicacion">
+            <img src="images/immortalflames.png" style="display:none" id="imagen-bandera">
+             
+            </div> 
+        </form>  
+       
+        </div>
+
 </body>
 <footer>
     <p id="copyright">© 2022 SQUARE ENIX LTD. Todos los derechos reservados.
         Las marcas citadas son propiedad de sus respectivos dueños en los Estados Unidos y otros países.
         Scalefast SAS. es el distribuidor autorizado y vendedor de todos los productos y servicios que se ofrecen en esta página.</p>
 </footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
 </html>
