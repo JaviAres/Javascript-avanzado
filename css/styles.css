@@ -130,6 +130,7 @@ background-color: black;
     z-index: 2;
     display: grid;
     background-color: #201c1c;
+    margin-top: 100px;
 }
 input{
   margin: 5px;
@@ -185,4 +186,21 @@ input[type=radio]#faccion1,#faccion2,#faccion3{
   z-index: 2;
   display: grid;
   background-color: #201c1c;
+  font-family: 'Proxima Nova',Arial,sans-serif;
+  color: white;
+}
+
+#maelstrom{
+  height: 200px;
+  margin:auto;
+}
+
+#twinadder{
+  height: 200px;
+  margin:auto;
+}
+
+#immortalflames{
+  height: 200px;
+  margin:auto;
 }
