@@ -209,16 +209,29 @@ input[type=radio]#faccion1,#faccion2,#faccion3{
 margin: 20px;
 }
 
+#expansiones{
+  margin:auto;
+}
+
 #expansiones ul{
   border-color: #a02c2c;
   display: inline-flex;
 }
-#expansiones input{
+
+
+#expansiones input[type="radio"] { 
   position: absolute;
-  left: -99999px;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-#expansiones input[type="radio"]:checked + label > img {
+#expansiones input[type="radio"] + img {
+  cursor: pointer;
+}
+
+
+#expansiones input[type="radio"]:checked + img {
   border: 1px solid rgb(0,0,0);
   box-shadow: 0 0 3px 3px #a02c2c;
 }

@@ -21,7 +21,3 @@ $("#erase").click(function(){
     $("#explicacion").empty(); 
     $("#explicacion").animate({height: "0px"});
 })
-
-$("#expansiones input[type='radio']").click(function(){
- this.animate({height:"225px"});
-})
