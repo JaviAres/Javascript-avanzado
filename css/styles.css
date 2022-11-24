@@ -235,3 +235,20 @@ margin: 20px;
   border: 1px solid rgb(0,0,0);
   box-shadow: 0 0 3px 3px #a02c2c;
 }
+
+#contacto,#contenedor_correo,#datos_numericos,#tarjetacredito{
+  display: flex;
+}
+
+p#errores{
+  color: red;
+}
+
+#valido{
+  height: 30px;
+  margin-top: 10px;
+}
+
+#cvv,#dni{
+  margin-left: 20px;
+}

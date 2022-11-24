@@ -1,4 +1,10 @@
 
+var DNI_REGEX=/^(\d{8})([A-Z])$/;
+var EMAIL_REGEX=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/;
+var TLF_REGEX=/(6)[ -]*([0-9][ -]*){8}$/;
+var TARJETA_REGEX=/^4[0-9]{12}(?:[0-9]{3})?$/;
+var CVV_REGEX=/^[0-9]{3,4}$/;
+
 $('input[id=faccion2]').click(function(){    
     $("#explicacion").empty();
     $("#explicacion").animate({height: "400px"});
@@ -21,3 +27,59 @@ $("#erase").click(function(){
     $("#explicacion").empty(); 
     $("#explicacion").animate({height: "0px"});
 })
+
+document.getElementById("Correo").addEventListener("keyup", validaCorreo);
+function validaCorreo() {
+  var x = document.getElementById("Correo");
+ if(!x.value.match(EMAIL_REGEX)){
+    $("#error_correo").empty();
+    $("#error_correo").append("<p id='errores'>Introduzca un correo válido.</p>")
+ }else{
+    $("#error_correo").empty();
+    $("#error_correo").append("<img src='images/valido.png' id='valido'>")
+ }
+}
+document.getElementById("Telefono").addEventListener("keyup", validaTLF);
+function validaTLF() {
+  var x = document.getElementById("Telefono");
+ if(!x.value.match(TLF_REGEX)){
+    $("#error_telefono").empty();
+    $("#error_telefono").append("<p id='errores'>Introduzca un numero de telefono válido</p>");
+ }else{
+    $("#error_telefono").empty();
+    $("#error_telefono").append("<img src='images/valido.png' id='valido'>");
+ }
+}
+document.getElementById("DNI").addEventListener("keyup", validaDNI);
+function validaDNI() {
+  var x = document.getElementById("DNI");
+ if(!x.value.match(DNI_REGEX)){
+    $("#error_DNI").empty();
+    $("#error_DNI").append("<p id='errores'>Introduzca un DNI validos</p>");
+ }else{
+    $("#error_DNI").empty();
+    $("#error_DNI").append("<img src='images/valido.png' id='valido'>");
+ }
+}
+document.getElementById("tarjeta").addEventListener("keyup", validaTarjeta);
+function validaTarjeta() {
+  var x = document.getElementById("tarjeta");
+ if(!x.value.match(TARJETA_REGEX)){
+    $("#error_tarjeta").empty();
+    $("#error_tarjeta").append("<p id='errores'>Introduzca un numero de tarjeta correcto.</p>")
+ }else{
+    $("#error_tarjeta").empty();
+    $("#error_tarjeta").append("<img src='images/valido.png' id='valido'>")
+ }
+}
+document.getElementById("cvv").addEventListener("keyup", validaCVV);
+function validaCVV() {
+  var x = document.getElementById("cvv");
+ if(!x.value.match(CVV_REGEX)){
+    $("#error_cvv").empty();
+    $("#error_cvv").append("<p id='errores'>Introduzca un cvv valido.</p>")
+ }else{
+    $("#error_cvv").empty();
+    $("#error_cvv").append("<img src='images/valido.png' id='valido'>")
+ }
+}

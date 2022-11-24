@@ -44,23 +44,45 @@
         <form id="formulario_FF14" name="registro" onsubmit="" method="post">
             <div id="Nombrecompleto">
                 <input type="text" placeholder="Nombre" id="Nombre"  required>
-                
+                <div id="error_nombre">
+                </div>
                 <input type="text" placeholder="Apellidos" id="Apellidos"  required>
+                <div id="error_apellidos">
 
+                </div>
                 <input type="date" placeholder="Fecha de Nacimiento"  id="fecha_nac" required>
             </div>
             <input type="text" placeholder="Nombre de Usuario"  id="Usuario" required>
-            <input type="text" placeholder="E-mail" id="Correo"  required>
+            <div id="error_usuario">
+
+            </div>
+                <div id="contenedor_correo">
+                <input type="text" placeholder="E-mail" id="Correo"  required>
+                <div id="error_correo">
+
+                </div>
+            </div>
             <div id="contacto">
+                <div id="datos_numericos">
                 <input type="text" placeholder="Telefono" id="Telefono" minlength="9" maxlength="11"  required>
-                
+                <div id="error_telefono">
+                </div>
+            </div>
                 <input type="text" placeholder="DNI" id="DNI"  required>
+                <div id="error_DNI">
+                </div>
             </div>
             
             
             <div id="tarjetacredito">
                 <input type="text" placeholder="Tarjeta de Credito" id="tarjeta">
+                <div id="error_tarjeta">
+                    
+                </div>
                 <input type="text" placeholder="CVV" id="cvv">
+                <div id="error_cvv">
+
+                </div>
             </div>
             
             <div id="faccion">
@@ -106,11 +128,12 @@
         </div>
 
 </body>
+<script src="js/scripts.js"></script>
 <footer>
     <p id="copyright">© 2022 SQUARE ENIX LTD. Todos los derechos reservados.
         Las marcas citadas son propiedad de sus respectivos dueños en los Estados Unidos y otros países.
         Scalefast SAS. es el distribuidor autorizado y vendedor de todos los productos y servicios que se ofrecen en esta página.</p>
 </footer>
 
-<script src="js/scripts.js"></script>
+
 </html>
