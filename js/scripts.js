@@ -92,10 +92,10 @@ function checkRadioBox(nameRadioBox) {
   return $(nameRadioBox).is(":checked") ? true : false;
 }
 function enableSubmit (idForm) {
-	$(idForm + " button.submit").removeAttr("disabled");
+	$(idForm + " button#enviar").removeAttr("disabled");
 }
 function disableSubmit (idForm) {
-	$(idForm + " button.submit").attr("disabled", "disabled");
+	$(idForm + " button#enviar").attr("disabled", "disabled");
 }
 
 $(function() {
@@ -103,10 +103,10 @@ $(function() {
 });
 
 function checkForm (idForm) {
-	$(idForm + "*").on("change keydown", function() {
+	$(idForm + "*").on("change keyup", function() {
 		if (checkInput("#Nombre", NAME_REGEX) && 
 			checkInput("#Apellidos", NAME_REGEX) && 
-      checkInput("#Correo", EMAIL_REGEX) && 
+         checkInput("#Correo", EMAIL_REGEX) && 
 			checkInput("#Usuario", USER_REGEX) && 
          checkInput("#Telefono", TLF_REGEX) && 
 			checkInput("#DNI", DNI_REGEX) && 
@@ -120,6 +120,43 @@ function checkForm (idForm) {
 			disableSubmit(idForm);
 		}
 	});
+}
+function radioFaccion(){
+   var ele = document.getElementsByName('faccion');
+   for(i = 0; i < ele.length; i++) {
+      if(ele[i].checked){
+         var faccion=ele[i].value;
+         
+      }}
+      return faccion;
+}
+
+function radioExpansion(){
+      
+      var ele2 = document.getElementsByName('expansion');
+      for(i = 0; i < ele2.length; i++) {
+         if(ele2[i].checked){
+            var expansion=ele2[i].value;
+         }}
+         return expansion;
+}
+document.getElementById("enviar").addEventListener("click",guardarUsuario)
+function guardarUsuario(){
+   var nombre=document.getElementById("Nombre").value;
+   var apellidos=document.getElementById("Apellidos").value;
+   var nombreusuario=document.getElementById("Usuario").value;
+   var correo=document.getElementById("Correo").value;
+   var telefono=document.getElementById("Telefono").value;
+   var dni=document.getElementById("DNI").value;
+   var tarjeta=document.getElementById("tarjeta").value;
+   var cvv=document.getElementById("cvv").value;
+   var faccion=radioFaccion();
+   var expansion=radioExpansion();
+   var usuario={'nombre': nombre,'apellidos':apellidos ,'nombreusuario':nombreusuario ,'correo':correo,'telefono':telefono,
+   'dni':dni,'tarjeta':tarjeta,'cvv':cvv,'faccionelegida' : faccion, 'expansionelegida' : expansion}
+
+   var datoUsuario=JSON.stringify(usuario);
+   localStorage.setItem("datoUsuario",datoUsuario);
 }
 
 

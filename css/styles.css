@@ -262,10 +262,18 @@ button:disabled{
     height: 40px;
     font-size: 1rem;
 }
+button{
+  margin: 5px;
+    height: 40px;
+    font-size: 1rem;
+}
 
 #oferta_expansion{
   color: white;
   font-size: 1rem;
   margin:auto;
   margin-top: 50px;
+}
+#enlace{
+  display: contents;
 }
