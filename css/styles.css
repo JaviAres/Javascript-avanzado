@@ -304,10 +304,29 @@ button{
   margin-left: 50px;
 }
 
-#explicacion_expansion{
+#explicacion_expansion,#explicacion-servicios-adicionales,#texto-menu-bajo{
   z-index: 2;
   display: grid;
   background-color: #201c1c;
   font-family: 'Proxima Nova',Arial,sans-serif;
   color: white;
 }
+
+#get-retainer,#get-phantasia,#mejora-cuenta{
+  width: 200px;
+  margin: 20px;
+}
+
+#menu-bajo{
+  display: inline-flex;
+  padding-bottom: 100px;
+}
+
+#servicios_adicionales{
+  margin-left: 300px;
+}
+
+#explicacion-servicios-adicionales{
+  margin-left: 1000px;
+}
+

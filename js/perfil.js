@@ -47,3 +47,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
         $("#imagen_perfil").append("<img src="+urlImagen+" id='imagen'>");
     }
 })
+
+$('#mejora-cuenta').on('click', function(){
+    $('body').addClass('active-modal');
+    $('.box-modal').addClass('modal-show');
+  });
+  
+  $('.overlay').on('click', function(){
+    $('body').removeClass('active-modal');
+    $('.box-modal').removeClass('modal-show');
+  })
