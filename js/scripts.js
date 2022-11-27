@@ -4,7 +4,8 @@ var EMAIL_REGEX=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/;
 var TLF_REGEX=/(6)[ -]*([0-9][ -]*){8}$/;
 var TARJETA_REGEX=/^4[0-9]{12}(?:[0-9]{3})?$/;
 var CVV_REGEX=/^[0-9]{3,4}$/;
-
+var NAME_REGEX = /^[a-z A-Z]{4,30}$/;
+var USER_REGEX = /^[a-z A-Z]{4,120}$/;
 $('input[id=faccion2]').click(function(){    
     $("#explicacion").empty();
     $("#explicacion").animate({height: "400px"});
@@ -83,3 +84,42 @@ function validaCVV() {
     $("#error_cvv").append("<img src='images/valido.png' id='valido'>")
  }
 }
+function checkInput(idInput, pattern) {
+   var input=$(idInput).val();
+	return input.match(pattern) ? true : false;
+}
+function checkRadioBox(nameRadioBox) {
+  return $(nameRadioBox).is(":checked") ? true : false;
+}
+function enableSubmit (idForm) {
+	$(idForm + " button.submit").removeAttr("disabled");
+}
+function disableSubmit (idForm) {
+	$(idForm + " button.submit").attr("disabled", "disabled");
+}
+
+$(function() {
+	checkForm("#formulario_FF14");
+});
+
+function checkForm (idForm) {
+	$(idForm + "*").on("change keydown", function() {
+		if (checkInput("#Nombre", NAME_REGEX) && 
+			checkInput("#Apellidos", NAME_REGEX) && 
+      checkInput("#Correo", EMAIL_REGEX) && 
+			checkInput("#Usuario", USER_REGEX) && 
+         checkInput("#Telefono", TLF_REGEX) && 
+			checkInput("#DNI", DNI_REGEX) && 
+         checkInput("#cvv", CVV_REGEX) && 
+			checkInput("#tarjeta", TARJETA_REGEX) && 
+         checkRadioBox("[name=faccion]") &&
+         checkRadioBox("[name=expansion]"))
+		{
+			enableSubmit(idForm);
+		} else {
+			disableSubmit(idForm);
+		}
+	});
+}
+
+

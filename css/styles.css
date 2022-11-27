@@ -130,7 +130,7 @@ background-color: black;
     z-index: 2;
     display: grid;
     background-color: #201c1c;
-    margin-top: 100px; 
+    margin-top: 150px; 
     inline-size: min-content;
     width: 1000px;
     padding: 40px;
@@ -251,4 +251,21 @@ p#errores{
 
 #cvv,#dni{
   margin-left: 20px;
+}
+
+#botones{
+  display: grid;
+}
+
+button:disabled{
+  margin: 5px;
+    height: 40px;
+    font-size: 1rem;
+}
+
+#oferta_expansion{
+  color: white;
+  font-size: 1rem;
+  margin:auto;
+  margin-top: 50px;
 }
