@@ -7,18 +7,51 @@
     <link rel="shortcut icon" href="../images/FFXIV_Logo.ico" type="image/x-icon">
     <title>Your Profile</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="../css/styles.css">
-    <header>
     
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>    
+
+<body id="cuerpo">
+<header>
         <div class="topnav">
           <a href="../index.html" id="logo_home">
             <img src="../images/FF14Logo.png" alt="Logo de la pagina" id="FF14">
           </a>
         </div>
-        </header>
-        <button id="ver">console log</button>
-</head>
-<body>
+</header>
+<div id="profile">
+    <div id="imagen_perfil">
+        <img src="../images/avatar.png" alt="foto de perfil" id="imagen">
+    </div>
+    <div id="datos_principales">
+        <h1 id="nombre_usuario">
+
+        </h1>
+        <h2 id="correo">
+
+        </h2>
+        <h3 id="nombre_real">
+
+        </h3>
+        <div id="faccion_elegida">
+            
+        </div>
+    </div>
+ 
+</div>   
+<div id="cambia_imagen">
+     <label for="cambiador">Haga click aqui para cambiar su foto de perfil</label>
+     <input type="file" id="cambiador">
+</div>
+<div id="expansiones_compradas">
     
+</div>
 </body>
+<script src="../js/perfil.js"></script>
+<footer>
+    <p id="copyright">© 2022 SQUARE ENIX LTD. Todos los derechos reservados.
+        Las marcas citadas son propiedad de sus respectivos dueños en los Estados Unidos y otros países.
+        Scalefast SAS. es el distribuidor autorizado y vendedor de todos los productos y servicios que se ofrecen en esta página.</p>
+</footer>
 </html>

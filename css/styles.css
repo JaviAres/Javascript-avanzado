@@ -277,3 +277,29 @@ button{
 #enlace{
   display: contents;
 }
+
+#nombre_usuario,#correo,#nombre_real{
+  color: #ddd;
+}
+#profile{
+  display: inline-flex;
+}
+
+#imagen{
+  width: 300px;
+  margin:50px
+
+}
+
+#datos_principales{
+  margin-top: 50px;
+}
+
+#profile_adders,#profile_flames,#profile_maelstrom{
+  width: 150px;
+}
+
+#cambia_imagen{
+  display: grid;
+  margin-left: 50px;
+}
